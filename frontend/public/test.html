@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>React Minimal Test</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module">
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+    
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      React.createElement('div', {
+        style: {
+          padding: '20px',
+          backgroundColor: 'red',
+          color: 'white',
+          fontSize: '24px'
+        }
+      }, 'DIRECT TEST - IF YOU SEE THIS, REACT WORKS')
+    );
+  </script>
+</body>
+</html>
