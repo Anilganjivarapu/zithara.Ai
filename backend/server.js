@@ -38,9 +38,13 @@ app.use(express.json());
 app.use('/api/chat', chatRoutes);
 app.use('/api/auth', authRoutes);
 import adminRoutes from './routes/adminRoutes.js';
+import productRoutes from './routes/productRoutes.js';
+
 
 app.use('/api/admin/auth', adminAuthRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/products', productRoutes);
+
 
 const PORT = process.env.PORT || 5000;
 
