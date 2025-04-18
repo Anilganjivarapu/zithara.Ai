@@ -68,7 +68,8 @@ const Register = () => {
         name: formData.name,
         email: formData.email,
         password: formData.password
-      });
+role: formData.isAdmin ? 'admin' : 'user'
+    });
 
       if (response.data.success) {
         navigate('/login');
