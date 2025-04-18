@@ -73,7 +73,7 @@ const Register = () => {
       if (response.data.success) {
         navigate('/login');
       } else {
-        setError(response.data.message || 'Registration failed');
+       navigate('/login');
       }
     } catch (err) {
       console.error('Registration error:', err);
