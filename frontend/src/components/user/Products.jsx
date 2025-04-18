@@ -21,7 +21,8 @@ const Products = () => {
         const { data } = await axiosInstance.get('/api/admin/products');
         setProducts(data);
       } catch (err) {
-        setError('Failed to load products');
+const errorMessage = err.response?.data?.message || err.message || 'Failed to load products';
+        setError(errorMessage);
         console.error('Error fetching products:', err);
       } finally {
         setIsLoading(false);
