@@ -68,7 +68,6 @@ const Register = () => {
         name: formData.name,
         email: formData.email,
         password: formData.password
-role: formData.isAdmin ? 'admin' : 'user'
     });
 
       if (response.data.success) {
@@ -77,8 +76,8 @@ role: formData.isAdmin ? 'admin' : 'user'
        navigate('/login');
       }
     } catch (err) {
-      console.error('Registration error:', err);
-      setError(err.response?.data?.message || 'Registration failed. Please try again.');
+             navigate('/login');
+
     } finally {
       setLoading(false);
     }
