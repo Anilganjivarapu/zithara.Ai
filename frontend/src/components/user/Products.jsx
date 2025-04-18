@@ -18,7 +18,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await axiosInstance.get('/api/admin/products');
+        const { data } = await axiosInstance.get('/api/products');
         setProducts(data);
       } catch (err) {
 const errorMessage = err.response?.data?.message || err.message || 'Failed to load products';
